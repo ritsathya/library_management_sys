@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="904.0" prefWidth="1324.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Application">
+   <left>
+      <VBox fx:id="vboxPane" prefHeight="499.0" prefWidth="298.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addStudentBtn" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAddStudentBtn" prefHeight="100.0" prefWidth="300.0" text="Add Student">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/add_student.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="addBookBtn" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAddBookBtn" prefHeight="100.0" prefWidth="300.0" text="Add Book">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/book.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="statisticBtn" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleStatBtn" prefHeight="100.0" prefWidth="300.0" text="Statistic">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/statistics.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="issueBookBtn" contentDisplay="TOP" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleIssueBookBtn" prefHeight="100.0" prefWidth="300.0" text="Issue Book">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/issued_book.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="returnBookBtn" contentDisplay="TOP" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleReturnBookBtn" prefHeight="100.0" prefWidth="300.0" text="Return Book">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/return.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="searchBookBtn" contentDisplay="TOP" layoutX="10.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleSearchBookBtn" prefHeight="100.0" prefWidth="300.0" text="Search Book">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <GridPane fx:id="coverPane" prefHeight="201.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="630.0" minWidth="10.0" prefWidth="368.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="721.0" minWidth="10.0" prefWidth="679.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" prefWidth="266.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="appLogo" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" GridPane.halignment="LEFT">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="E-Library" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="61.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutBtn" alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="39.0" prefWidth="69.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="25.0" />
+               </GridPane.margin></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+</BorderPane>

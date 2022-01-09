@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="statisticPane" prefHeight="395.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Statistic">
+   <bottom>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="94.0" prefWidth="820.0" spacing="20.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="170.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="Total Students" />
+                  <TextField fx:id="totalStudent" editable="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="170.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="Total Books" />
+                  <TextField fx:id="totalBook" editable="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="177.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="Borrowed" />
+                  <TextField fx:id="borrowed" editable="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="630.0" layoutY="10.0" prefHeight="177.0" prefWidth="180.0" spacing="10.0">
+               <children>
+                  <Label text="Available Book" />
+                  <TextField fx:id="available" editable="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+           <TableColumn fx:id="studentIDCol" prefWidth="90.0" text="Student ID" />
+            <TableColumn fx:id="stuNameCol" prefWidth="199.0" text="Student Name" />
+           <TableColumn fx:id="bookIDCol" prefWidth="90.0" text="Book ID" />
+            <TableColumn fx:id="bookTitleCol" prefWidth="193.0" text="Book Title" />
+            <TableColumn fx:id="issueDateCol" prefWidth="193.0" text="Issue Date" />
+            <TableColumn fx:id="returnDateCol" prefWidth="183.0" text="Return Date" />
+            <TableColumn fx:id="returnedDateCol" prefWidth="183.0" text="Returned Date" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>

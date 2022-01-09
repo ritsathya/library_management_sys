@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="searchBookPane" prefHeight="509.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchBook">
+   <center>
+      <TableView fx:id="tableView" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="titleCol" prefWidth="159.0" text="Title" />
+            <TableColumn fx:id="authorCol" minWidth="0.0" prefWidth="181.0" text="Author" />
+            <TableColumn fx:id="yearCol" prefWidth="73.0" text="Year" />
+            <TableColumn fx:id="typeCol" prefWidth="71.0" text="Type" />
+            <TableColumn fx:id="shelfNoCol" prefWidth="72.0" text="Shelf No" />
+            <TableColumn fx:id="floorCol" prefWidth="60.0" text="Floor" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <Label alignment="CENTER" text="Search Book" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <left>
+      <VBox prefHeight="440.0" prefWidth="288.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="bookTitle" prefHeight="45.0" prefWidth="120.0" promptText="Enter Book's title">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="authorName" layoutX="30.0" layoutY="30.0" prefHeight="45.0" prefWidth="120.0" promptText="Enter author's name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="searchBtn" mnemonicParsing="false" text="Search" />
+            <Button fx:id="resetBtn" mnemonicParsing="false" text="Reset" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </left>
+</BorderPane>
